@@ -11,9 +11,9 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         SanPham ao = new Ao(1,"Ao 1","Tee-1","Coc tay",150,3,"nho","dai");
-        SanPham ao2 = new Ao(2,"Ao 2","Tee-2","Coc tay",150,3,"nho","dai");
-        SanPham ao3 = new Ao(3,"Ao 3","Tee-3","Coc tay",150,3,"nho","dai");
-        SanPham ao4 = new Ao(4,"Ao 4","Tee-4","Coc tay",150,3,"nho","dai");
+        SanPham ao2 = new Ao(2,"Ao 2","Tee-2","Coc tay",100,3,"nho","dai");
+        SanPham ao3 = new Ao(3,"Ao 3","Tee-3","Coc tay",50,3,"nho","dai");
+        SanPham ao4 = new Ao(4,"Ao 4","Tee-4","Coc tay",10,3,"nho","dai");
         SanPham quan = new Quan(10,"Quan ","Tee-10","Coc tay",200,3,"nho",80);
         SanPham quan2 = new Quan(11,"Quan 2","Tee-11","Coc tay",600,3,"nho",90);
         SanPham quan3 = new Quan(12,"Quan 3","Tee-12","Coc tay",50,3,"nho",60);
@@ -63,6 +63,7 @@ public class Main {
                                 break;
                             case 4:
                                 gioHang.showSanPham();
+                                System.out.println("Gia tien: " + gioHang.checkTien());
                                 break;
                             case 5:
                                 khachHang.addGioHang(gioHang);
@@ -111,7 +112,7 @@ public class Main {
                     System.out.println("Chọn sai rồi, mời chọn lại");
             }
 
-        }while (!(choose ==4));
+        }while (!(choose ==5));
 
     }
     static void menuQuanLy(){
@@ -126,8 +127,8 @@ public class Main {
         System.out.println("\n1. Xem tất cả sản phẩm");
         System.out.println("2. Nhập sản phẩm bạn muốn thêm vào giỏ hàng");
         System.out.println("3. Nhập sản phẩm bạn muốn xóa khỏi giỏ hàng");
-        System.out.println("4. Xem giỏ hàng của bạn");
-        System.out.println("5. Kết thúc");
+        System.out.println("4. Xem giỏ hàng của bạn và xem hóa đơn");
+        System.out.println("5. Kết thúc và thanh toán hóa đơn");
 
     }
 

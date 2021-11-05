@@ -42,6 +42,14 @@ public class GioHang {
         }
     }
 
+    public int checkTien(){
+        int tongTien = 0;
+        for (int i = 0; i < arrayListSanPham.size(); i++) {
+            tongTien = tongTien + arrayListSanPham.get(i).getGiatien();
+        }
+        return tongTien;
+    }
+
     public int getSizeSanPham(){
         return arrayListSanPham.size();
     }
